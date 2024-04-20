@@ -73,7 +73,13 @@ export default function SearchAppBar() {
               inputProps={{ "aria-label": "search" }}
             />
           </Search>
-          <div class="mb-3">
+          <div
+            style={{
+              display: "flex",
+              marginLeft: "auto",
+              alignItems: "center",
+            }}
+          >
             <LoginIcon sx={{ cursor: "pointer" }} />
             <Typography
               variant="h6"

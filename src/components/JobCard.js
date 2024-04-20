@@ -10,7 +10,7 @@ import SkillChip from "../components/SkillChip";
 export default function ActionAreaCard({ job }) {
   const navigate = useNavigate();
   return (
-    <Card>
+    <Card sx={{ minHeight: "320px", position: "relative" }}>
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {job.title}
@@ -21,7 +21,14 @@ export default function ActionAreaCard({ job }) {
           {job.description}
         </Typography>
       </CardContent>
-      <CardActions sx={{ display: "flex", justifyContent: "center" }}>
+      <CardActions
+        sx={{
+          position: "absolute",
+          bottom: "10px",
+          left: "50%",
+          transform: "translate(-50%)",
+        }}
+      >
         <Button
           size="small"
           variant="contained"
